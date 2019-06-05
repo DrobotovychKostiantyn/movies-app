@@ -57,7 +57,7 @@ const Header = ({
           onClick={() => handleMenuClick()}
           color="white"
         />
-        <a href="/The-Movie-App/" className={s.logo}>
+        <a href="/movies-app/#/" className={s.logo}>
           <img src={logo} alt="" />
         </a>
       </div>
