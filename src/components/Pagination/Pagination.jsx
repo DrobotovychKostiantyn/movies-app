@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactPaginate from 'react-paginate';
 
-import { fetchSuccessMovies } from '../../../modules/operations';
+import { fetchSuccessMovies } from '../../modules/operations';
 import styles from './Pagination.module.css';
 
 class Pagination extends Component {

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSuccessMovies } from '../../../modules/operations';
 import { getMovies, getGenres } from '../../../modules/selectors';
-import HeaderContainer from '../Header/HeaderContainer/HeaderContainer';
+import HeaderContainer from '../../Header/HeaderContainer/HeaderContainer';
 import MoviesView from './MoviesView';
-import Pagination from '../Pagination/Pagination';
+import Pagination from '../../Pagination/Pagination';
 import styles from './Movies.module.css';
 
 class MainContainer extends Component {
@@ -58,6 +58,5 @@ const mapDispatchToProps = { fetchSuccessMovies };
 
 export default connect(
   mapStateToProps,
-
   mapDispatchToProps,
 )(MainContainer);

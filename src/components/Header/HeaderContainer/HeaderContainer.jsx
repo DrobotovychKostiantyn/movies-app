@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getGenres, getMovies } from '../../../../modules/selectors';
+import { getGenres, getMovies } from '../../../modules/selectors';
 import {
   fetchSuccessGenres,
   fetchSuccessSearchMovie,
   fetchSuccessMovies,
-} from '../../../../modules/operations';
+} from '../../../modules/operations';
 
 import Header from '../Header/Header';
 
