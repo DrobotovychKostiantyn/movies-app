@@ -50,7 +50,6 @@ class MainContainer extends Component {
 
 const mapStateToProps = state => ({
   movies: getMovies(state),
-
   genres: getGenres(state),
 });
 

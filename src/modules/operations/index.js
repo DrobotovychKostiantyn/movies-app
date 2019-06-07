@@ -13,7 +13,6 @@ export const fetchSuccessMovies = (
     )
     .then(data => {
       dispatch(actions.fetchPopularSeccess(data.data));
-      console.log(data.request.responseURL);
     })
     .catch(error => dispatch(actions.fetchPopularError(error)));
 };

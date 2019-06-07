@@ -4,7 +4,7 @@ import CircularProgressbar from 'react-circular-progressbar';
 import whiteImage from '../Movies/img/whiteBlock.jpg';
 import styles from './Actor.module.css';
 
-import Header from '../Header/HeaderContainer/HeaderContainer';
+import Header from '../../Header/HeaderContainer/HeaderContainer';
 
 const color = el => {
   if (el < 5) return 'orangered';
