@@ -18,6 +18,14 @@ const MoviesView = ({ movies }) => {
         movies.map(el => (
           <li className={styles.item} key={el.id}>
             <NavLink className={styles.moreInfo} to={`/movieId/${el.id}`}>
+              {el.poster_path ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w300${el.poster_path}`}
+                  alt=""
+                />
+              ) : (
+                <img className={styles.myPhoto} src={whiteImage} alt="" />
+              )}
               <div className={styles.topInfo}>
                 <div className={styles.titleContainer}>
                   <h2 className={styles.title}> {el.title}</h2>
@@ -48,16 +56,8 @@ const MoviesView = ({ movies }) => {
                   />
                 </div>
               </div>
-              {el.poster_path ? (
-                <img
-                  src={`https://image.tmdb.org/t/p/w300${el.poster_path}`}
-                  alt=""
-                />
-              ) : (
-                <img className={styles.myPhoto} src={whiteImage} alt="" />
-              )}
 
-              {/* <p className={styles.overview}>{el.overview}</p> */}
+              <p className={styles.overview}>{el.overview.slice(0, 150)}</p>
             </NavLink>
           </li>
         ))}

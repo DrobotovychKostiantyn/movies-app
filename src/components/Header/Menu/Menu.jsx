@@ -13,23 +13,12 @@ class Menu extends Component {
   }
 
   render() {
-    const { search, handleSubmit, handleChange, children, open } = this.props;
+    const { children, open } = this.props;
     return (
       <div>
         <div className={open ? s.container__open : s.container__close}>
           {this.state.open ? (
-            <div className={s.menu__list}>
-              <form onSubmit={handleSubmit} className={s.form__search}>
-                <input
-                  className={s.search__input}
-                  onChange={handleChange}
-                  type="text"
-                  placeholder="Search"
-                  value={search}
-                />
-              </form>
-              {children}
-            </div>
+            <div className={s.menu__list}>{children}</div>
           ) : null}
         </div>
       </div>

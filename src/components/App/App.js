@@ -5,7 +5,6 @@ import styles from './App.module.css';
 import Movies from '../pages/Movies/MoviesContainer';
 import MoviePage from '../pages/Movies/MoviePage/MoviePageContainer';
 import ActorPage from '../pages/Actor/ActorContainer';
-import Footer from '../Footer/Footer';
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
         <Route path="/genre/:id" component={Movies} />
         <Route path="/" component={Movies} />
       </Switch>
-      <Footer />
     </div>
   );
 };

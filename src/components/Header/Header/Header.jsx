@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import MenuButton from '../MenuButton/MenuButton';
 import Menu from '../Menu/Menu';
 import s from './Header.module.css';
-import logo from '../Logo/logo.svg';
 
 const sortArr = [
   { name: 'Popularity', sortUrl: 'popularity.desc' },
@@ -57,20 +56,21 @@ const Header = ({
           onClick={() => handleMenuClick()}
           color="white"
         />
-        <a href="/movies-app/#/" className={s.logo}>
-          <img src={logo} alt="" />
-        </a>
+
+        <form onSubmit={handleSubmit} className={s.form__search}>
+          <input
+            className={s.search__input}
+            onChange={handleChange}
+            type="text"
+            placeholder="Search"
+            value={search}
+          />
+        </form>
       </div>
-      <Menu
-        open={menuOpen}
-        search={search}
-        handleSubmit={handleSubmit}
-        handleChange={handleChange}
-      >
+      <Menu open={menuOpen}>
         {
           <div className={s.categories__container}>
             <div className={s.categories__sort}>
-              {' '}
               <h3>Sort By:</h3>
               {[...menuItemsSort]}
             </div>
