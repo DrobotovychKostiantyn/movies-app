@@ -1,16 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import CircularProgressbar from 'react-circular-progressbar';
 import whiteImage from '../Movies/img/whiteBlock.jpg';
 import styles from './Actor.module.css';
 
 import Header from '../../Header/HeaderContainer/HeaderContainer';
-
-const color = el => {
-  if (el < 5) return 'orangered';
-  if (el < 8) return '#55dd44';
-  return 'blue';
-};
 
 const ActorView = ({ actor }) => {
   return (
@@ -41,30 +34,6 @@ const ActorView = ({ actor }) => {
                           <h2 className={styles.title}> {el.title}</h2>
                           <p>{el.release_date}</p>
                         </div>
-                        <div className={styles.CircularProgressbar__container}>
-                          <CircularProgressbar
-                            percentage={el.vote_average * 10}
-                            variant="determinate"
-                            text={`${el.vote_average}`}
-                            background
-                            backgroundPadding={5}
-                            styles={{
-                              background: {
-                                fill: 'transparent',
-                              },
-                              text: {
-                                fill: color(el.vote_average),
-                                fontSize: '25px',
-                                transform: 'translate(-18px, 6px)',
-                                fontWeight: '700',
-                              },
-                              path: {
-                                stroke: color(el.vote_average),
-                              },
-                              trail: { stroke: 'transparent' },
-                            }}
-                          />
-                        </div>
                       </div>
                       {el.poster_path ? (
                         <img
@@ -77,7 +46,9 @@ const ActorView = ({ actor }) => {
                         <img src={whiteImage} alt="" />
                       )}
 
-                      {/* <p className={styles.overview}>{el.overview}</p> */}
+                      <p className={styles.overview}>
+                        {el.overview.slice(0, 150)}
+                      </p>
                     </NavLink>
                   </li>
                 ))}

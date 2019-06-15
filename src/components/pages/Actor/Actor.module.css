@@ -1,5 +1,7 @@
 .wrapper {
   padding-top: 11vh;
+  display: flex;
+  flex-direction: column;
 }
 .container {
   text-align: center;
@@ -11,13 +13,16 @@
   margin: 20px 0;
 }
 .actor__img {
-  margin-bottom: 35px;
+  display: block;
+  margin: 0 auto 35px;
 }
 .list {
   padding-top: 9vh;
   text-align: center;
   min-height: 70vh;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .item {
   padding: 20px 10px;
@@ -31,7 +36,7 @@
 }
 .item img {
   border-radius: 5px;
-  height: 450px;
+  width: 100%;
 }
 .topInfo {
   display: flex;
@@ -83,27 +88,26 @@
 @media (min-width: 768px) {
   .container {
     width: 750px;
-    display: flex;
-    justify-content: space-around;
-  }
-  section {
-    width: 350px;
   }
   .actor__topInfo {
-    width: 350px;
     display: inline-block;
   }
   .list {
-    width: 350px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 0;
   }
+  .item img {
+    border-radius: 5px;
+    height: 450px;
+  }
 }
 @media (min-width: 1024px) {
   .container {
     width: 1000px;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 1440px) {

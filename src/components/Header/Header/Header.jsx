@@ -57,23 +57,22 @@ const Header = ({
           color="white"
         />
 
-        <form onSubmit={handleSubmit} className={s.form__search}>
-          <input
-            className={s.search__input}
-            onChange={handleChange}
-            type="text"
-            placeholder="Search"
-            value={search}
-          />
-        </form>
+        {!menuOpen && (
+          <form onSubmit={handleSubmit} className={s.form__search}>
+            <input
+              className={s.search__input}
+              onChange={handleChange}
+              type="text"
+              placeholder="Search"
+              value={search}
+            />
+          </form>
+        )}
       </div>
       <Menu open={menuOpen}>
         {
           <div className={s.categories__container}>
-            <div className={s.categories__sort}>
-              <h3>Sort By:</h3>
-              {[...menuItemsSort]}
-            </div>
+            <div className={s.categories__sort}>{[...menuItemsSort]}</div>
             <div className={s.categories__sort}>
               <h3>Genres:</h3>
               {[...menuGenres]}

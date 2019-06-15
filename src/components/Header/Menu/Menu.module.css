@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 30vw;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   background-color: #667287;
@@ -22,7 +22,7 @@
   top: 0;
   left: 0;
   height: 0;
-  width: 30vw;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   background: black;
@@ -30,4 +30,66 @@
   color: #fafafa;
   transition: height 0.3s ease;
   z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .container__open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #667287;
+    opacity: 0.95;
+    color: #fafafa;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+  .container__close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    opacity: 0.95;
+    color: #fafafa;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container__open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #667287;
+    opacity: 0.95;
+    color: #fafafa;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
+  .container__close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background: black;
+    opacity: 0.95;
+    color: #fafafa;
+    transition: height 0.3s ease;
+    z-index: 2;
+  }
 }

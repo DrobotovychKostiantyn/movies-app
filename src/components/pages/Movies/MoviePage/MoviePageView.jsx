@@ -35,24 +35,28 @@ const MoviePageView = ({
     <>
       {movieById && (
         <div>
-          <div
-            style={{
-              backgroundImage: `url(https://image.tmdb.org/t/p/original${
-                movieById.backdrop_path
-              })`,
-            }}
-            className={styles.background__container}
-          >
-            <div className={styles.shadow}>
-              <NavLink to="/" className={styles.btnComeBack}>
-                ← Back to main
-              </NavLink>
-              <div>
-                <h1>{movieById.title}</h1>
-                <h3>{movieById.tagline}</h3>
-              </div>
-              <p className={styles.overview}>{movieById.overview}</p>
+          <div className={styles.background__container}>
+            <NavLink to="/" className={styles.btnComeBack}>
+              ← Back
+            </NavLink>
+
+            <div>
+              <h1 style={{ textAlign: 'center' }}>{movieById.title}</h1>
+              <h3 style={{ textAlign: 'center' }}>{movieById.tagline}</h3>
             </div>
+          </div>
+
+          <div className={styles.video__container}>
+            <h2 className={styles.title_container}>Videos</h2>
+
+            <AliceCarousel
+              className={styles.carusel}
+              items={arr}
+              responsive={responsiveVideos}
+              fadeOutAnimation
+              mouseDragEnabled
+              buttonsDisabled
+            />
           </div>
         </div>
       )}
@@ -80,18 +84,7 @@ const MoviePageView = ({
               </li>
             ))}
         </ul>
-        <div className={styles.video__container}>
-          <h2 className={styles.title_container}>Videos</h2>
 
-          <AliceCarousel
-            className={styles.carusel}
-            items={arr}
-            responsive={responsiveVideos}
-            fadeOutAnimation
-            mouseDragEnabled
-            buttonsDisabled
-          />
-        </div>
         <div className={styles.btn__container}>
           <button
             className={
