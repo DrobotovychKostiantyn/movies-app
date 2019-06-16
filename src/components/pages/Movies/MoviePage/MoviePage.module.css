@@ -108,8 +108,21 @@
   padding: 0;
 }
 
+.btn__container button:hover {
+  color: silver;
+}
+
 .title_container {
   text-align: center;
+}
+
+.video__container {
+  width: 100%;
+  text-align: center;
+}
+
+.btnOption__after {
+  color: silver;
 }
 
 @media (min-width: 425px) {

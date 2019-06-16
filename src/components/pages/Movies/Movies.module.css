@@ -2,10 +2,11 @@
   text-align: center;
 }
 .list {
-  padding-top: 9vh;
+  /* padding-top: 9vh; */
   text-align: center;
   min-height: 70vh;
   margin: auto;
+  padding: 9vh 0 0 0;
 }
 .item {
   padding: 20px 10px;
@@ -17,7 +18,9 @@
 }
 .item img {
   border-radius: 5px;
-  height: 450px;
+  /* height: 450px; */
+  width: 100%;
+  margin: 0 0 15px 0;
 }
 .topInfo {
   display: flex;
