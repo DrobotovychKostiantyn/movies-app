@@ -1,1 +1,1 @@
-# react-movies
+# movies-app
